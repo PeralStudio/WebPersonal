@@ -1,16 +1,25 @@
 import React from 'react';
-import { DatePicker } from 'antd';
+import Admin from "./pages/Admin";
+import Signin from "./pages/Admin/SignIn";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+
+
 import './App.scss';
 
 
 function App() {
+
   return (
-    <div className="App">
-      <h1>Web Personal-Client</h1>
-      <h2>Proyecto</h2>
-      <DatePicker  />
+    <div>
+      <h1>Estamos en App</h1>
+      <Admin />
+      <Signin />
+      <Home />
+      <Contact />
     </div>
   );
 }
+
  
 export default App;
