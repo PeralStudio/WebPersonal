@@ -15,14 +15,16 @@ function LayoutAdmin(props) {
     return (
       <Layout>
         <MenuSider menuCollapsado ={menuCollapsado}/>
-        <Layout className="layout-admin">
+        <Layout className="layout-admin" 
+        style={{marginLeft: menuCollapsado ? "80px" : "200px"}}>
             <Header className="layout-admin__header">
               <MenuTop 
               menuCollapsado={menuCollapsado}
               setMenuCollapsado={setMenuCollapsado}              
               />
               </Header>
-            <Content className="layout-admin__content"> <LoadRoutes routes={routes} /> </Content>
+            <Content className="layout-admin__content">
+               <LoadRoutes routes={routes} /> </Content>
             <Footer className="layout-admin__footer"> Copyright Peral</Footer>
         </Layout>
       </Layout>

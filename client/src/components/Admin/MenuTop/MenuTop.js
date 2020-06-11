@@ -1,6 +1,6 @@
 import React from "react";
-import { Button} from "antd";
-import {MenuOutlined, PoweroffOutlined} from '@ant-design/icons';
+import { Button } from "antd";
+import {MenuFoldOutlined, PoweroffOutlined} from '@ant-design/icons';
 import PeralLogo from "../../../assets/img/png/logo-white.png";
 
 import "./MenuTop.scss";
@@ -16,12 +16,14 @@ export default function MenuTop(props) {
                     src={PeralLogo}
                     alt="Alberto Peral"
                     />
-                    <Button type="link" onClick={() => setMenuCollapsado(!menuCollapsado)}>
-                    <MenuOutlined />
+                    <Button type="link" onClick={() => setMenuCollapsado(!menuCollapsado)}
+>
+                    <MenuFoldOutlined />
                     </Button>
+                    
             </div>
             <div className="menu-top__right">
-                <Button type="link" onClick={() => setMenuCollapsado(!menuCollapsado)}>
+                <Button type="link" >
                 <PoweroffOutlined />
                 </Button>
             </div>
