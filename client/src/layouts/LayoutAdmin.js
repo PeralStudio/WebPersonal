@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from "react-router-dom";
 import { Layout } from "antd";
 import MenuTop from "../components/Admin/MenuTop";
+import MenuSider from "../components/Admin/MenuSider";
 
 import "./LayoutAdmin.scss";
 
@@ -12,7 +13,7 @@ function LayoutAdmin(props) {
 
     return (
       <Layout>
-        {/* TO DO Menu Sider */}
+        <MenuSider />
         <Layout className="layout-admin">
             <Header className="layout-admin__header"><MenuTop /></Header>
             <Content className="layout-admin__content"> <LoadRoutes routes={routes} /> </Content>
