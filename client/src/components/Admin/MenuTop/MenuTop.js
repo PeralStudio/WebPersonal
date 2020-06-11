@@ -19,7 +19,7 @@ export default function MenuTop() {
                     </Button>
             </div>
             <div className="menu-top__right">
-                <Button type="link">
+                <Button type="link" onClick={() => console.log('Cerrar Sesion')}>
                 <PoweroffOutlined />
                 </Button>
             </div>
