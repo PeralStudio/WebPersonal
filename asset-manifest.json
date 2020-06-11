@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/WebPersonal/static/css/main.f327b72e.chunk.css",
+    "main.js": "/WebPersonal/static/js/main.3ca9a938.chunk.js",
+    "main.js.map": "/WebPersonal/static/js/main.3ca9a938.chunk.js.map",
+    "runtime-main.js": "/WebPersonal/static/js/runtime-main.e730c21e.js",
+    "runtime-main.js.map": "/WebPersonal/static/js/runtime-main.e730c21e.js.map",
+    "static/css/2.a2026422.chunk.css": "/WebPersonal/static/css/2.a2026422.chunk.css",
+    "static/js/2.5cd9cb3a.chunk.js": "/WebPersonal/static/js/2.5cd9cb3a.chunk.js",
+    "static/js/2.5cd9cb3a.chunk.js.map": "/WebPersonal/static/js/2.5cd9cb3a.chunk.js.map",
+    "index.html": "/WebPersonal/index.html",
+    "precache-manifest.fa3584607d2683ff75371dc9e1cd48cc.js": "/WebPersonal/precache-manifest.fa3584607d2683ff75371dc9e1cd48cc.js",
+    "service-worker.js": "/WebPersonal/service-worker.js",
+    "static/css/2.a2026422.chunk.css.map": "/WebPersonal/static/css/2.a2026422.chunk.css.map",
+    "static/css/main.f327b72e.chunk.css.map": "/WebPersonal/static/css/main.f327b72e.chunk.css.map",
+    "static/js/2.5cd9cb3a.chunk.js.LICENSE.txt": "/WebPersonal/static/js/2.5cd9cb3a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e730c21e.js",
+    "static/css/2.a2026422.chunk.css",
+    "static/js/2.5cd9cb3a.chunk.js",
+    "static/css/main.f327b72e.chunk.css",
+    "static/js/main.3ca9a938.chunk.js"
+  ]
+}
