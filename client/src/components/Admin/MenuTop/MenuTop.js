@@ -5,7 +5,9 @@ import PeralLogo from "../../../assets/img/png/logo-white.png";
 
 import "./MenuTop.scss";
 
-export default function MenuTop() {
+export default function MenuTop(props) {
+    const { menuCollapsado, setMenuCollapsado } = props;
+
     return (
         <div className="menu-top">
             <div className="menu-top__left">
@@ -14,12 +16,12 @@ export default function MenuTop() {
                     src={PeralLogo}
                     alt="Alberto Peral"
                     />
-                    <Button type="link" onClick={() => console.log('Click.')}>
-                        <MenuOutlined />
+                    <Button type="link" onClick={() => setMenuCollapsado(!menuCollapsado)}>
+                    <MenuOutlined />
                     </Button>
             </div>
             <div className="menu-top__right">
-                <Button type="link" onClick={() => console.log('Cerrar Sesion')}>
+                <Button type="link" onClick={() => setMenuCollapsado(!menuCollapsado)}>
                 <PoweroffOutlined />
                 </Button>
             </div>

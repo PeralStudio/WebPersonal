@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch } from "react-router-dom";
 import { Layout } from "antd";
 import MenuTop from "../components/Admin/MenuTop";
@@ -9,13 +9,19 @@ import "./LayoutAdmin.scss";
 function LayoutAdmin(props) {
 
     const { routes } = props;
+    const [menuCollapsado, setMenuCollapsado] = useState(false);
     const {Header, Content, Footer } = Layout;
 
     return (
       <Layout>
-        <MenuSider />
+        <MenuSider menuCollapsado ={menuCollapsado}/>
         <Layout className="layout-admin">
-            <Header className="layout-admin__header"><MenuTop /></Header>
+            <Header className="layout-admin__header">
+              <MenuTop 
+              menuCollapsado={menuCollapsado}
+              setMenuCollapsado={setMenuCollapsado}              
+              />
+              </Header>
             <Content className="layout-admin__content"> <LoadRoutes routes={routes} /> </Content>
             <Footer className="layout-admin__footer"> Copyright Peral</Footer>
         </Layout>
