@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { Layout } from "antd";
 
 import "./LayoutAdmin.scss";
@@ -14,23 +14,27 @@ function LayoutAdmin(props) {
         <h2>Menu Sider Admin</h2>
         <Layout>
             <Header>Header.......</Header>
-            <Content> <LoadRouters routes={routes} /> </Content>
+            <Content> <LoadRoutes routes={routes} /> </Content>
             <Footer> Copyright Peral</Footer>
         </Layout>
       </Layout>
     );
   }
 
-  function LoadRouters ({routes}) {
+  function LoadRoutes ({routes}) {
 
-      return routes.map((route, index) => (
+    return (
+        <Switch>
+            {routes.map((route, index) => (
           <Route
           key={index}
           path={route.path}
           exact={route.exact}
           component={route.component}
           />
-      ))
+            ))}
+        </Switch>
+        );  
   }
 
 
