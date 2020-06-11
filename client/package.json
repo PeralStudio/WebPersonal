@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "Web Personal Alberto Peral",
-  "homepage": "https://peralstudio.github.io/WebPersonal/",
+  "homepage": "",
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "@testing-library/jest-dom": "^4.2.4",
