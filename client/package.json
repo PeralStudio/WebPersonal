@@ -2,6 +2,8 @@
   "name": "web-personal-client",
   "version": "0.1.0",
   "private": true,
+  "description": "Clima App creado por Alberto Peral",
+  "homepage": "https://peralstudio.github.io/WebPersonal/",
   "dependencies": {
     "@ant-design/icons": "^4.2.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -18,6 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.0.0"
   }
 }
