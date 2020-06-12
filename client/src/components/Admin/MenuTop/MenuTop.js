@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import { Button } from "antd";
 import {MenuFoldOutlined, PoweroffOutlined, MenuUnfoldOutlined} from '@ant-design/icons';
 import PeralLogo from "../../../assets/img/png/logo-white.png";
@@ -11,11 +12,13 @@ export default function MenuTop(props) {
     return (
         <div className="menu-top">
             <div className="menu-top__left">
-                <img 
-                    className="menu-top__left-logo"
-                    src={PeralLogo}
-                    alt="Alberto Peral"
-                    />
+                <Link to="/admin">
+                    <img 
+                        className="menu-top__left-logo"
+                        src={PeralLogo}
+                        alt="Alberto Peral"
+                        />
+                </Link>
 
                 <Button type="link" onClick={() => setMenuCollapsado(!menuCollapsado)} >
                 {React.createElement(menuCollapsado ? MenuUnfoldOutlined : MenuFoldOutlined)}
