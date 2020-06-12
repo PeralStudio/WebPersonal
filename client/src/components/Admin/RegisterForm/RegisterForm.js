@@ -1,12 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import { Form, Input, Button, Checkbox, notification } from "antd";
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 import "./RegisterForm.scss";
 
 export default function RegisterForm() {
+    const [inputs, setInputs] = useState({
+        email:"",
+        password:"",
+        repeatPassword:"",
+        privacyPolicy: false
+    });
+
+    const changeForm = e => {
+        if(e.target.name === "privacyPolicy") {
+            setInputs({
+                ...inputs,
+                [e.target.name]: e.target.checked
+            });
+        } else {
+            setInputs({
+                ...inputs,
+                [e.target.name]: e.target.value
+        });
+    }
+    };
+
+    const register = e => {
+        e.preventDefault();
+        console.log(inputs);
+    }
+
     return (
-        <Form className="register-form">
+        <Form className="register-form" onSubmit={register} onChange={changeForm}>
             <Form.Item>
                 <Input
                     prefix={<UserOutlined style={{color: "rgba(0,0,0,.25)"}}/>}
@@ -14,6 +40,7 @@ export default function RegisterForm() {
                     name="email"
                     placeholder="Correo electronico"
                     className="register-form__input"
+                    value={inputs.email}
                 />
             </Form.Item>
             <Form.Item>
@@ -23,6 +50,7 @@ export default function RegisterForm() {
                     name="password"
                     placeholder="Contraseña"
                     className="register-form__input"
+                    value={inputs.password}
                 />
             </Form.Item>
             <Form.Item>
@@ -32,10 +60,11 @@ export default function RegisterForm() {
                     name="repeatPassword"
                     placeholder="Repetir contraseña"
                     className="register-form__input"
+                    value={inputs.repeatPassword}
                 />
             </Form.Item>
             <Form.Item>
-                <Checkbox name="privacyPolicy">
+                <Checkbox name="privacyPolicy" checked={inputs.privacyPolicy}>
                     He leido y acepto la politica de privacidad
                 </Checkbox>
             </Form.Item>
