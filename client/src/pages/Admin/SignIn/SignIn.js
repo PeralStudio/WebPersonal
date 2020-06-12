@@ -1,12 +1,33 @@
 import React from 'react';
+import {Layout, Tabs} from "antd";
+import { Redirect } from "react-router-dom";
+import Logo from "../../../assets/img/png/logo-white.png";
+
+
 import "./SignIn.scss";
 
 function SignIn() {
+  const { Content }= Layout;
+  const {TabPane} = Tabs;
 
     return (
-      <div>
-        <h1>Estamos en SignIn.....</h1>
-      </div>
+      <Layout className="sign-in">
+        <Content className="sign-in__content">
+            <h1 className="sign-in__content-logo">
+                <img src={Logo} alt="Alberto Peral" />
+            </h1>
+            <div className="sign-in__content-tabs"> 
+              <Tabs type="tabBarExtraContent">
+                <TabPane clasName="centrar" tab={<span>Entrar</span>} key="1">
+                  Componente LoginForm
+                </TabPane>
+                <TabPane tab={<span>Nuevo usuario</span>} key="2">
+                  Componente RegisterForm
+                </TabPane>
+              </Tabs>
+            </div>
+        </Content>
+      </Layout>
     );
   }
 
