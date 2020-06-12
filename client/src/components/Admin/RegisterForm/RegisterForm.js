@@ -13,21 +13,21 @@ export default function RegisterForm() {
     });
 
     const changeForm = e => {
-        if(e.target.name === "privacyPolicy") {
-            setInputs({
-                ...inputs,
-                [e.target.name]: e.target.checked
-            });
+        if (e.target.name === "privacyPolicy") {
+          setInputs({
+            ...inputs,
+            [e.target.name]: e.target.checked
+          });
         } else {
-            setInputs({
-                ...inputs,
-                [e.target.name]: e.target.value
-        });
-    }
-    };
+          setInputs({
+            ...inputs,
+            [e.target.name]: e.target.value
+          });
+        }
+      };
 
-    const register = e => {
-        e.preventDefault();
+      const register = e => {
+        
         console.log(inputs);
     }
 
@@ -74,5 +74,6 @@ export default function RegisterForm() {
                 </Button>
             </Form.Item>
         </Form>
-    )
+    
+    );
 }
