@@ -49,6 +49,11 @@
                     width: 220px;
                     font-size: 0em + 23px / $defaultFontSize;
                 }
+                @media (min-width: $media-breackpoint-up-xs) {
+                    width: 170px;
+                    font-size: 0em + 23px / $defaultFontSize;
+                }
+                
 
                 &.hover {
                     color: $font-grey-dark;
